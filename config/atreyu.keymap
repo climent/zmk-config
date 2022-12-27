@@ -24,15 +24,14 @@
 		bindings = <&kp TAB >, <&ctrl_tab>;
 		mods = <(MOD_LCTL)>;
 	    };
-        gresc: grave_escape {
-            compatible = "zmk,behavior-mod-morph";
-            label = "GRAVE_ESCAPE";
-            #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp GRAVE>;
-            mods = <(MOD_LGUI)>;
-	    keep-mods = <(MOD_LGUI)>;
-        };
-
+            gresc: grave_escape {
+                compatible = "zmk,behavior-mod-morph";
+                label = "GRAVE_ESCAPE";
+                #binding-cells = <0>;
+                bindings = <&kp ESC>, <&kp GRAVE>;
+                mods = <(MOD_LGUI)>;
+    	        keep-mods = <(MOD_LGUI)>;
+            };
 	};
 
         keymap {
@@ -67,12 +66,11 @@
 // |    | ESC | GUI | ALT | CAPS|  "  |   | F7  | F8  | F9  | F10 | F11 | F12 |
 //                       |     | ADJ | BKSP |    |     |
                         bindings = <
-   &trans &kp N1    &kp N2    &kp N3    &kp N4    &kp N5        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp DEL
-   &trans &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH      &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6
-   &trans &kp ESC   &kp LGUI  &kp RALT  &kp CLCK  &kp DQT       &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-   &trans &kp ESC   &kp LGUI  &kp RALT  &kp CLCK  &kp DQT       &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-   &trans &kp ESC   &kp LGUI  &kp RALT  &kp CLCK  &kp DQT       &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-//                                &trans      &mo 3       &kp BSPC        &trans      &trans
+   &trans        &kp F1    &kp F2    &kp F3    &kp F4       &kp F5        &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &trans
+   &trans        &kp F11   &kp F12   &trans    &trans       &trans        &trans    &trans    &trans    &trans    &trans    &trans 
+   &kp LG(LC(Q)) &trans    &trans    &trans    &trans       &trans        &trans    &trans    &trans    &trans    &trans    &trans 
+   &trans        &kp CAPS  &trans    &trans    &kp LC(LEFT) &kp LC(RIGHT) &trans    &trans    &trans    &trans    &trans    &trans 
+   &trans        &trans    &trans    &trans    &trans       &trans        &trans    &trans    &trans    &trans    &trans    &trans 
                         >;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };

@@ -9,6 +9,16 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+	behaviors {
+	    shiftable_tab: shiftable_tab {
+		compatible = "zmk,behavior-mod-morph";
+		label = "ONE_HAND_CMD_SHIFT_TAB";
+		#binding-cells = <0>;
+		bindings = <&kp TAB>, <&kp LC(LS(TAB))>;
+		mods = <(MOD_LCTL & MOD_LGUI)>;
+	    };
+	};
+
         keymap {
                 compatible = "zmk,keymap";
 

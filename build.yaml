@@ -19,3 +19,5 @@ include:
 #    shield: sofle_right
   - board: nice_nano_v2
     shield: atreyu
+  - board: nice_nano_v2
+    shield: atreyu_rev2

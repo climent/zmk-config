@@ -12,18 +12,17 @@
 	behaviors {
 	    ctrl_tab: ctrl_tab {
 		compatible = "zmk,behavior-mod-morph";
-		label = "CTRL_TAB";
+		label = "GUI_CTRL_TAB";
 		#binding-cells = <0>;
-		bindings = <&kp TAB>, <&kp TAB>;
-		mods = <(MOD_LCTL)>;
-		keep-mods = <(MOD_LCTL)>;
+		bindings = <&kp LC(TAB)>, <&kp LC(LS(TAB))>;
+		mods = <(MOD_LGUI)>;
 	    };
 	    shiftable_tab: shiftable_tab {
 		compatible = "zmk,behavior-mod-morph";
-		label = "SHIFT_CTRL_TAB";
+		label = "CTRL_TAB";
 		#binding-cells = <0>;
-		bindings = <&ctrl_tab>, <LS(&ctrl_tab)>;
-		mods = <(MOD_LGUI)>;
+		bindings = <&kp TAB >, <&ctrl_tab>;
+		mods = <(MOD_LCTL)>;
 	    };
         gresc: grave_escape {
             compatible = "zmk,behavior-mod-morph";

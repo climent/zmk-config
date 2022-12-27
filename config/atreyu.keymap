@@ -73,7 +73,7 @@
                         bindings = <
    &trans        &kp LC(1) &kp LC(2) &kp LC(3) &kp LC(4)    &kp LC(5)     &kp LC(6) &kp LC(7) &kp LC(8) &kp LC(9) &kp LC(0) &trans
    &kp BSPC      &trans    &trans    &kp UP    &trans       &kp PG_UP     &trans    &trans    &trans    &trans    &trans    &trans 
-   &kp LG(LC(Q)) &trans    &kp LEFT  &kp DOWN  &kp RIGHT    &kp PG_DOWN   &trans    &trans    &trans    &trans    &trans    &trans 
+   &trans        &trans    &kp LEFT  &kp DOWN  &kp RIGHT    &kp PG_DN     &trans    &trans    &trans    &trans    &trans    &trans 
    &trans        &kp CAPS  &trans    &trans    &kp LC(LEFT) &kp LC(RIGHT) &trans    &trans    &trans    &trans    &trans    &trans 
    &trans        &trans    &trans    &trans    &kp SPACE    &trans        &trans    &trans    &trans    &trans    &trans    &trans 
                         >;

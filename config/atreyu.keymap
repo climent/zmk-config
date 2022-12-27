@@ -10,12 +10,20 @@
 
 / {
 	behaviors {
+	    ctrl_tab: ctrl_tab {
+		compatible = "zmk,behavior-mod-morph";
+		label = "CTRL_TAB";
+		#binding-cells = <0>;
+		bindings = <&kp TAB>, <&kp TAB>;
+		mods = <(MOD_LCTL)>;
+		keep-mods = <(MOD_LCTL)>;
+	    };
 	    shiftable_tab: shiftable_tab {
 		compatible = "zmk,behavior-mod-morph";
-		label = "ONE_HAND_CMD_SHIFT_TAB";
+		label = "SHIFT_CTRL_TAB";
 		#binding-cells = <0>;
-		bindings = <&kp TAB>, <&kp LC(LS(TAB))>;
-		mods = <(MOD_LCTL & MOD_LGUI)>;
+		bindings = <&ctrl_tab>, <&ctrl_tab>;
+		mods = <(MOD_LGUI)>;
 		keep-mods = <(MOD_LGUI)>;
 	    };
         gresc: grave_escape {

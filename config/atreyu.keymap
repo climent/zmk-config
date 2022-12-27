@@ -16,6 +16,7 @@
 		#binding-cells = <0>;
 		bindings = <&kp TAB>, <&kp LC(LS(TAB))>;
 		mods = <(MOD_LCTL & MOD_LGUI)>;
+		keep-mods = <(MOD_LCTL&MOD_LGUI)>;
 	    };
 	};
 

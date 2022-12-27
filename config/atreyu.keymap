@@ -22,9 +22,8 @@
 		compatible = "zmk,behavior-mod-morph";
 		label = "SHIFT_CTRL_TAB";
 		#binding-cells = <0>;
-		bindings = <&ctrl_tab>, <&ctrl_tab>;
+		bindings = <&ctrl_tab>, <LS(&ctrl_tab)>;
 		mods = <(MOD_LGUI)>;
-		keep-mods = <(MOD_LGUI)>;
 	    };
         gresc: grave_escape {
             compatible = "zmk,behavior-mod-morph";

@@ -43,7 +43,7 @@
    &shiftable_tab  &kp Q   &kp W    &kp E    &kp R   &kp T     &kp Y  &kp U     &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL       &kp A   &kp S    &kp D    &kp F   &kp G     &kp H  &kp J     &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT       &kp Z   &kp X    &kp C    &kp V   &kp B     &kp N  &kp M     &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
-   &none     &none   &kp LALT &kp LGUI &kp RET &none     &none  &kp SPACE &mo 1     &mo 2   &none    &kp RCTRL
+   &mo 3           &mo 2   &kp LALT &kp LGUI &kp RET &none     &none  &kp SPACE &mo 1     &mo 2   &none    &kp RCTRL
                         >;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
@@ -60,17 +60,22 @@
                 };
 
                 raise_layer {
-// -----------------------------------------------------------------------------------------
-// |    |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL |
-// |    |  -  |  =  |  [  |  ]  |  \  |   | F1  | F2  | F3  | F4  | F5  | F6  |
-// |    | ESC | GUI | ALT | CAPS|  "  |   | F7  | F8  | F9  | F10 | F11 | F12 |
-//                       |     | ADJ | BKSP |    |     |
                         bindings = <
    &trans        &kp F1    &kp F2    &kp F3    &kp F4       &kp F5        &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &trans
    &trans        &kp F11   &kp F12   &trans    &trans       &trans        &trans    &trans    &trans    &trans    &trans    &trans 
    &kp LG(LC(Q)) &trans    &trans    &trans    &trans       &trans        &trans    &trans    &trans    &trans    &trans    &trans 
    &trans        &kp CAPS  &trans    &trans    &kp LC(LEFT) &kp LC(RIGHT) &trans    &trans    &trans    &trans    &trans    &trans 
    &trans        &trans    &trans    &trans    &trans       &trans        &trans    &trans    &trans    &trans    &trans    &trans 
+                        >;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+                };
+                nav_layer {
+                        bindings = <
+   &trans        &kp LC(1) &kp LC(2) &kp LC(3) &kp LC(4)    &kp LC(5)     &kp LC(6) &kp LC(7) &kp LC(8) &kp LC(9) &kp LC(0) &trans
+   &kp BSPC      &trans    &trans    &kp UP    &trans       &kp PG_UP     &trans    &trans    &trans    &trans    &trans    &trans 
+   &kp LG(LC(Q)) &trans    &kp LEFT  &kp DOWN  &kp RIGHT    &kp PG_DOWN   &trans    &trans    &trans    &trans    &trans    &trans 
+   &trans        &kp CAPS  &trans    &trans    &kp LC(LEFT) &kp LC(RIGHT) &trans    &trans    &trans    &trans    &trans    &trans 
+   &trans        &trans    &trans    &trans    &kp SPACE    &trans        &trans    &trans    &trans    &trans    &trans    &trans 
                         >;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };

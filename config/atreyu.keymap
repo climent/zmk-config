@@ -43,12 +43,12 @@
    &shiftable_tab  &kp Q   &kp W    &kp E    &kp R   &kp T     &kp Y  &kp U     &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL       &kp A   &kp S    &kp D    &kp F   &kp G     &kp H  &kp J     &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT       &kp Z   &kp X    &kp C    &kp V   &kp B     &kp N  &kp M     &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
-   &mo 3           &mo 2   &kp LALT &kp LGUI &kp RET &none     &none  &kp SPACE &mo 1     &mo 2   &none    &kp RCTRL
+   &mo 3           &mo 2   &kp LALT &kp LGUI &kp RET &none     &none  &kp SPACE &mo 1     &mo 3   &none    &kp RCTRL
                         >;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
-                lower_layer {
+                raise_layer {
                         bindings = <
    &trans &trans &trans &trans &trans   &trans        &kp HOME  &kp END   &trans    &kp LBRC   &kp RBRC  &kp TILDE
    &trans &trans &trans &trans &kp HOME &kp END       &kp PG_UP &kp DOWN  &kp UP    &kp LBKT   &kp RBKT  &kp DEL
@@ -59,25 +59,45 @@
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
-                raise_layer {
+                lower_layer {
                         bindings = <
    &trans        &kp F1    &kp F2    &kp F3    &kp F4       &kp F5        &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &trans
-   &trans        &kp F11   &kp F12   &trans    &trans       &trans        &trans    &trans    &trans    &trans    &trans    &trans 
-   &kp LG(LC(Q)) &trans    &trans    &trans    &trans       &trans        &trans    &trans    &trans    &trans    &trans    &trans 
+   &trans        &kp F11   &kp F12   &trans    &trans       &trans        &tog 0    &trans    &trans    &trans    &trans    &trans 
+   &kp LG(LC(Q)) &trans    &trans    &trans    &trans       &trans        &trans    &trans    &tog 4    &trans    &trans    &trans 
    &trans        &kp CAPS  &trans    &trans    &kp LC(LEFT) &kp LC(RIGHT) &trans    &trans    &trans    &trans    &trans    &trans 
    &trans        &trans    &trans    &trans    &trans       &trans        &trans    &trans    &trans    &trans    &trans    &trans 
                         >;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
+
                 nav_layer {
                         bindings = <
-   &trans        &kp LC(N1) &kp LC(N2) &kp LC(N3) &kp LC(N4)    &kp LC(N5)     &kp LC(N6) &kp LC(N7) &kp LC(N8) &kp LC(N9) &kp LC(N0) &trans
-   &kp BSPC      &trans     &trans     &kp UP     &trans        &kp PG_UP      &trans     &trans     &trans     &trans     &trans     &trans 
-   &trans        &trans     &kp LEFT   &kp DOWN   &kp RIGHT     &kp PG_DN      &trans     &trans     &trans     &trans     &trans     &trans 
-   &trans        &kp CAPS   &trans     &trans     &kp LC(LEFT)  &kp LC(RIGHT)  &trans     &trans     &trans     &trans     &trans     &trans 
-   &trans        &trans     &trans     &trans     &kp SPACE     &trans         &trans     &trans     &trans     &trans     &trans     &trans 
+   &trans        &kp LC(N1) &kp LC(N2) &kp LC(N3) &kp LC(N4)    &kp LC(N5)     &kp LC(N6) &kp LC(N7)   &kp LC(N8) &kp LC(N9)      &kp LC(N0) &trans
+   &kp BSPC      &trans     &trans     &kp UP     &trans        &kp PG_UP      &trans     &trans       &trans     &trans          &trans     &trans 
+   &trans        &trans     &kp LEFT   &kp DOWN   &kp RIGHT     &kp PG_DN      &trans     &kp LC(LEFT) &trans     &kp LC(RIGHT)   &trans     &trans 
+   &trans        &kp CAPS   &trans     &trans     &kp LC(LEFT)  &kp LC(RIGHT)  &trans     &kp LC(TAB)  &kp LG(R)  &kp LC(LS(TAB)) &trans     &trans 
+   &trans        &trans     &trans     &trans     &kp SPACE     &trans         &trans     &trans       &trans     &trans          &trans     &trans 
                         >;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
+		colemak_layer {
+                        bindings = <
+   &gresc          &kp N1  &kp N2   &kp N3   &kp N4  &kp N5    &kp N6 &kp N7    &kp N8    &kp N9  &kp N0   &kp GRAVE
+   &shiftable_tab  &kp Q   &kp W    &kp F    &kp P   &kp G     &kp J  &kp L     &kp U     &kp Y   &kp SEMI &kp BSPC
+   &kp LCTRL       &kp A   &kp R    &kp S    &kp T   &kp D     &kp H  &kp N     &kp E     &kp I   &kp O    &kp SQT
+   &kp LSHFT       &kp Z   &kp X    &kp C    &kp V   &kp B     &kp K  &kp M     &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
+   &mo 3           &mo 2   &kp LALT &kp LGUI &kp RET &none     &none  &kp SPACE &mo 1     &mo 3   &none    &kp RCTRL
+                        >;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+                };
+
+//  [_COLEMAK] = LAYOUT( \
+//       KC_ESC,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                       KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_GRV,
+//       KC_TAB,   KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,                       KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_BSPC,
+//       KC_LCTL,  KC_A,    KC_R,    KC_S,    KC_T,    KC_D,                       KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    LT(_SYM,KC_QUOT),
+//       KC_LSFT,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                       KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
+//       NAV,      LWR,     KC_LALT, KC_LGUI, KC_ENT,  KC_LBRC,                    KC_RBRC, KC_SPC,  RSE,     NAV,  KC_NUM,  KC_RCTL
+//  ),
+
         };
 };

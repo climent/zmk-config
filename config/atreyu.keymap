@@ -87,7 +87,7 @@
    &shiftable_tab  &kp Q   &kp W    &kp F    &kp P   &kp G     &kp J  &kp L     &kp U     &kp Y   &kp SEMI &kp BSPC
    &kp LCTRL       &kp A   &kp R    &kp S    &kp T   &kp D     &kp H  &kp N     &kp E     &kp I   &kp O    &kp SQT
    &kp LSHFT       &kp Z   &kp X    &kp C    &kp V   &kp B     &kp K  &kp M     &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
-   &mo 3           &mo 2   &kp LALT &kp LGUI &kp RET &none     &none  &kp SPACE &mo 1     &mo 3   &none    &kp RCTRL
+   &mo 3           &mo 2   &kp LALT &kp LGUI &kp RET &none     &none  &kp SPACE &mo 1     &mo 3   &kp RET  &kp RCTRL
                         >;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };

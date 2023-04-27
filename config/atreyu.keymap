@@ -14,12 +14,12 @@
             combo_c_a_r {
                 timeout-ms = <50>;
                 key-positions = <32 33>;
-                bindings = <&kc LC(LALT)>;
+                bindings = <&kp LC(LALT)>;
             };
             combo_c_a_l {
                 timeout-ms = <50>;
                 key-positions = <28 29>;
-                bindings = <&kc LC(LALT)>;
+                bindings = <&kp LC(LALT)>;
             };
         };
 	behaviors {

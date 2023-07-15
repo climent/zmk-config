@@ -59,6 +59,7 @@
    &mo 3           &mo 2   &kp LALT &kp LGUI &kp RET &kp LC(LALT) &kp LC(LALT) &kp SPACE &mo 1     &mo 3   &none    &kp RCTRL
 // &mo 3           &mo 2   &kp LALT &kp LGUI &kp RET &none     &none  &kp SPACE &mo 1     &mo 3   &none    &kp RCTRL
                         >;
+			//sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
@@ -70,6 +71,7 @@
    &trans     &trans       &trans       &trans       &trans       &trans        &kp UNDER &kp MINUS &kp EQUAL &kp PLUS   &kp BSLH  &trans
    &trans     &trans       &trans       &trans       &kp SPACE    &kp HOME      &kp END   &trans    &trans    &trans     &trans    &trans
                         >;
+			//sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
@@ -81,6 +83,7 @@
    &trans        &kp CAPS  &trans    &trans    &kp LC(LEFT) &kp LC(RIGHT) &trans    &trans    &trans    &trans    &trans    &trans 
    &trans        &trans    &trans    &trans    &trans       &trans        &trans    &trans    &trans    &trans    &trans    &trans 
                         >;
+			//sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
@@ -92,6 +95,7 @@
    &trans        &kp CAPS   &trans     &trans     &kp LC(LEFT)  &kp LC(RIGHT)  &trans     &kp LC(LS(TAB)) &kp LG(R)  &kp LC(TAB)     &trans     &trans 
    &trans        &trans     &trans     &trans     &kp SPACE     &trans         &trans     &trans          &trans     &trans          &trans     &trans 
                         >;
+			//sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 		colemak_layer {
@@ -102,6 +106,7 @@
    &kp LSHFT       &kp Z   &kp X    &kp C    &kp V   &kp B     &kp K  &kp M     &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
    &mo 3           &mo 2   &kp LALT &kp LGUI &kp RET &none     &none  &kp SPACE &mo 1     &mo 3   &kp RET  &kp RCTRL
                         >;
+			//sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 

@@ -22,6 +22,7 @@
                 bindings = <&kp LC(LALT)>;
             };
         };
+
 	behaviors {
 	    ctrl_tab: ctrl_tab {
 		compatible = "zmk,behavior-mod-morph";
@@ -46,6 +47,12 @@
     	        keep-mods = <(MOD_LGUI)>;
             };
 	};
+
+        sensors: sensors {
+            compatible = "zmk,keymap-sensors";
+//            sensors = <&left_encoder>;
+            triggers-per-rotation = <20>;
+        };
 
         keymap {
                 compatible = "zmk,keymap";

@@ -31,7 +31,7 @@
 		#binding-cells = <0>;
 		bindings = <&kp LC(TAB)>, <&kp LC(LS(TAB))>;
 		mods = <(MOD_LGUI)>;
-//		keep-mods = <(MOD_GUI)>;
+		keep-mods = <(MOD_LGUI)>;
 	    };
 	    shiftable_tab: shiftable_tab {
 		compatible = "zmk,behavior-mod-morph";

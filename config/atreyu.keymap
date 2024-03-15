@@ -49,6 +49,14 @@
                 mods = <(MOD_LGUI)>;
     	        keep-mods = <(MOD_LGUI)>;
             };
+            shiftable_gresc: shiftable_grave_escape {
+                compatible = "zmk,behavior-mod-morph";
+                label = "SHIFT_GRAVE_ESCAPE";
+                #binding-cells = <0>;
+                bindings = <&kp ESC>, <&kp LS(GRAVE)>;
+                mods = <(MOD_LGUI)>;
+    	        keep-mods = <(MOD_LGUI)>;
+            };
 	};
 
 //        sensors: sensors {
@@ -65,7 +73,8 @@
    &gresc          &kp N1  &kp N2   &kp N3   &kp N4  &kp N5       &kp N6       &kp N7    &kp N8    &kp N9  &kp N0   &kp GRAVE
    &shiftable_tab  &kp Q   &kp W    &kp E    &kp R   &kp T        &kp Y        &kp U     &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL       &kp A   &kp S    &kp D    &kp F   &kp G        &kp H        &kp J     &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT       &kp Z   &kp X    &kp C    &kp V   &kp B        &kp N        &kp M     &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
+   &kp LSHFT       &kp Z   &kp X    &kp C    &kp V   &kp B        &kp N        &kp M     &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+// &kp LSHFT       &kp Z   &kp X    &kp C    &kp V   &kp B        &kp N        &kp M     &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
    &mo 3           &mo 2   &kp LALT &kp LGUI &kp RET &kp LC(LALT) &kp LC(LALT) &kp SPACE &mo 1     &mo 3   &none    &kp RCTRL
 // &mo 3           &mo 2   &kp LALT &kp LGUI &kp RET &none     &none  &kp SPACE &mo 1     &mo 3   &none    &kp RCTRL
                         >;
@@ -87,11 +96,11 @@
 
                 lower_layer {
                         bindings = <
-   &trans        &kp F1    &kp F2    &kp F3    &kp F4       &kp F5        &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &trans
-   &trans        &kp F11   &kp F12   &trans    &trans       &trans        &tog 0    &trans    &trans    &trans    &trans    &trans 
-   &kp LG(LC(Q)) &trans    &trans    &trans    &trans       &trans        &trans    &trans    &tog 4    &trans    &trans    &trans 
-   &trans        &kp CAPS  &trans    &trans    &kp LC(LEFT) &kp LC(RIGHT) &trans    &trans    &trans    &trans    &trans    &trans 
-   &trans        &trans    &trans    &trans    &trans       &trans        &trans    &trans    &trans    &trans    &trans    &trans 
+   &shiftable_gresc  &kp F1    &kp F2    &kp F3    &kp F4       &kp F5        &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &trans
+   &trans            &kp F11   &kp F12   &trans    &trans       &trans        &tog 0    &trans    &trans    &trans    &trans    &trans 
+   &kp LG(LC(Q))     &trans    &trans    &trans    &trans       &trans        &trans    &trans    &tog 4    &trans    &trans    &trans 
+   &trans            &kp CAPS  &trans    &trans    &kp LC(LEFT) &kp LC(RIGHT) &trans    &trans    &trans    &trans    &trans    &trans 
+   &trans            &trans    &trans    &trans    &trans       &trans        &trans    &trans    &trans    &trans    &trans    &trans 
                         >;
 			//sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

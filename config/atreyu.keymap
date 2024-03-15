@@ -96,11 +96,11 @@
 
                 lower_layer {
                         bindings = <
-   &shiftable_gresc  &kp F1    &kp F2    &kp F3    &kp F4       &kp F5        &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &trans
-   &trans            &kp F11   &kp F12   &trans    &trans       &trans        &tog 0    &trans    &trans    &trans    &trans    &trans 
-   &kp LG(LC(Q))     &trans    &trans    &trans    &trans       &trans        &trans    &trans    &tog 4    &trans    &trans    &trans 
-   &trans            &kp CAPS  &trans    &trans    &kp LC(LEFT) &kp LC(RIGHT) &trans    &trans    &trans    &trans    &trans    &trans 
-   &trans            &trans    &trans    &trans    &trans       &trans        &trans    &trans    &trans    &trans    &trans    &trans 
+   &trans         &kp F1    &kp F2    &kp F3    &kp F4       &kp F5        &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &trans
+   &trans         &kp F11   &kp F12   &trans    &trans       &trans        &tog 0    &trans    &trans    &trans    &trans    &trans 
+   &kp LG(LC(Q))  &trans    &trans    &trans    &trans       &trans        &trans    &trans    &tog 4    &trans    &trans    &trans 
+   &trans         &kp CAPS  &trans    &trans    &kp LC(LEFT) &kp LC(RIGHT) &trans    &trans    &trans    &trans    &trans    &trans 
+   &trans         &trans    &trans    &trans    &trans       &trans        &trans    &trans    &trans    &trans    &trans    &trans 
                         >;
 			//sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -108,11 +108,11 @@
 
                 nav_layer {
                         bindings = <
-   &trans        &kp LC(N1) &kp LC(N2) &kp LC(N3) &kp LC(N4)    &kp LC(N5)     &kp LC(N6) &kp LC(N7)      &kp LC(N8) &kp LC(N9)      &kp LC(N0) &kp TILDE
-   &kp BSPC      &trans     &trans     &kp UP     &trans        &kp PG_UP      &trans     &kp C_VOL_DN    &kp C_MUTE &kp C_VOL_UP    &kp C_PP   &kp LG(W) 
-   &trans        &trans     &kp LEFT   &kp DOWN   &kp RIGHT     &kp PG_DN      &trans     &kp LC(LEFT)    &trans     &kp LC(RIGHT)   &trans     &trans 
-   &trans        &kp CAPS   &trans     &trans     &kp LC(LEFT)  &kp LC(RIGHT)  &trans     &kp LC(LS(TAB)) &kp LG(R)  &kp LC(TAB)     &trans     &trans 
-   &trans        &trans     &trans     &trans     &kp SPACE     &trans         &trans     &trans          &trans     &trans          &trans     &trans 
+   &shiftable_gresc  &kp LC(N1) &kp LC(N2) &kp LC(N3) &kp LC(N4)    &kp LC(N5)     &kp LC(N6) &kp LC(N7)      &kp LC(N8) &kp LC(N9)      &kp LC(N0) &kp TILDE
+   &kp BSPC          &trans     &trans     &kp UP     &trans        &kp PG_UP      &trans     &kp C_VOL_DN    &kp C_MUTE &kp C_VOL_UP    &kp C_PP   &kp LG(W) 
+   &trans            &trans     &kp LEFT   &kp DOWN   &kp RIGHT     &kp PG_DN      &trans     &kp LC(LEFT)    &trans     &kp LC(RIGHT)   &trans     &trans 
+   &trans            &kp CAPS   &trans     &trans     &kp LC(LEFT)  &kp LC(RIGHT)  &trans     &kp LC(LS(TAB)) &kp LG(R)  &kp LC(TAB)     &trans     &trans 
+   &trans            &trans     &trans     &trans     &kp SPACE     &trans         &trans     &trans          &trans     &trans          &trans     &trans 
                         >;
 			//sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

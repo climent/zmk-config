@@ -21,3 +21,7 @@ include:
     shield: atreyu
   - board: nice_nano_v2
     shield: atreyu_rev2
+  - board: nice_nano_v2
+    shield: settings_reset
+
+

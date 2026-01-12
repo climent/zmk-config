@@ -31,7 +31,6 @@
 		#binding-cells = <0>;
 		bindings = <&kp LC(TAB)>, <&kp LC(LS(TAB))>;
 		mods = <(MOD_LGUI)>;
-//		keep-mods = <(MOD_LGUI)>;
 	    };
 	    shiftable_tab: shiftable_tab {
 		compatible = "zmk,behavior-mod-morph";
@@ -39,7 +38,6 @@
 		#binding-cells = <0>;
 		bindings = <&kp TAB >, <&ctrl_tab>;
 		mods = <(MOD_LCTL)>;
-//		keep-mods = <(MOD_LCTL)>;
 	    };
             gresc: grave_escape {
                 compatible = "zmk,behavior-mod-morph";

@@ -27,12 +27,14 @@
 	    ctrl_tab: ctrl_tab {
 		compatible = "zmk,behavior-mod-morph";
 		label = "GUI_CTRL_TAB";
+		#binding-cells = <0>;
 		bindings = <&kp LC(TAB)>, <&kp LC(LS(TAB))>;
 		mods = <(MOD_LGUI)>;
 	    };
 	    shiftable_tab: shiftable_tab {
 		compatible = "zmk,behavior-mod-morph";
 		label = "CTRL_TAB";
+		#binding-cells = <0>;
 		bindings = <&kp TAB >, <&ctrl_tab>;
 		mods = <(MOD_LCTL)>;
 	    };

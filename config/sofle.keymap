@@ -10,6 +10,19 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+        combos {
+            compatible = "zmk,combos";
+            combo_c_a_r {
+                timeout-ms = <50>;
+                key-positions = <31 32>;
+                bindings = <&kp LC(LALT)>;
+            };
+            combo_c_a_l {
+                timeout-ms = <50>;
+                key-positions = <27 28>;
+                bindings = <&kp LC(LALT)>;
+            };
+        };
 	behaviors {
 	    ctrl_tab: ctrl_tab {
 		compatible = "zmk,behavior-mod-morph";
@@ -59,7 +72,7 @@
 	&shiftable_tab &kp Q  &kp W    &kp E    &kp R     &kp T                          &kp Y     &kp U     &kp I     &kp O     &kp P    &kp BSPC
 	&kp LCTRL      &kp A  &kp S    &kp D    &kp F     &kp G                          &kp H     &kp J     &kp K     &kp L     &kp SEMI &kp SQT
 	&kp LSHFT      &kp Z  &kp X    &kp C    &kp V     &kp B     &kp C_MUTE &none     &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH &kp RSHFT
-		       &mo 3  &mo 1    &kp LALT &kp LGUI  &kp RET   &kp SPACE  &mo 2     &kp RCTRL &kp RALT  &kp RCTRL
+        &mo 3                 &mo 1    &kp LALT &kp LGUI  &kp RET                        &kp SPACE &mo 2     &kp RCTRL &kp RALT           &kp RCTRL
 		>;
 		sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 	    };
@@ -90,15 +103,25 @@
 	// |     | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
 	//              |      |       |       |      |      |  |      |      |      |       |      |
 		bindings = <
-	&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &trans    &trans    &trans   &trans    &trans  &trans
-	&trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                   &kp PG_UP &trans    &kp UP   &trans    &kp N0  &kp DEL
-	&trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                 &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp RET 
-	&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &trans   &trans  &trans    &trans    &trans   &trans    &trans  &trans
-				&trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans   &trans
+	&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                &trans    &trans    &trans    &kp LBRC  &kp RBRC &kp TILDE
+	&trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                      &kp PG_UP &trans    &kp UP    &kp LBKT  &kp RBKT &kp DEL
+	&trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                    &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &kp PIPE &kp RET 
+	&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans    &trans    &trans  &kp UNDER &kp MINUS &kp EQUAL &kp PLUS  &kp BSLH &trans
+				&trans       &trans       &trans       &trans    &kp SPACE &trans  &trans    &trans    &trans    &trans
 		>;
 		sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 	    };
-	};
+            nav_layer {
+                bindings = <
+   &shiftable_gresc  &kp LC(N1) &kp LC(N2) &kp LC(N3) &kp LC(N4)    &kp LC(N5)                     &kp LC(N6) &kp LC(N7)      &kp LC(N8) &kp LC(N9)      &kp LC(N0) &kp TILDE
+   &kp BSPC          &kp LC(N6) &kp HOME   &kp UP     &kp END       &kp PG_UP                      &trans     &kp C_VOL_DN    &kp C_MUTE &kp C_VOL_UP    &kp C_PP   &kp LG(W) 
+   &trans            &trans     &kp LEFT   &kp DOWN   &kp RIGHT     &kp PG_DN                      &trans     &kp LC(LEFT)    &trans     &kp LC(RIGHT)   &trans     &trans 
+   &trans            &kp CAPS   &trans     &trans     &kp LC(LEFT)  &kp LC(RIGHT)  &trans  &trans  &trans     &kp LC(LS(TAB)) &kp LG(R)  &kp LC(TAB)     &trans     &trans 
+   &trans                       &trans     &trans     &trans        &kp SPACE                      &trans          &trans     &trans          &trans     &trans 
+		>;
+		sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+	    };
+      };
 };
 
 &nice_view_spi {

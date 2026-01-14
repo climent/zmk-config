@@ -30,14 +30,14 @@
 		label = "SHIFT_VOLUME_UP";
 		#binding-cells = <0>;
 		bindings = <&kp C_VOL_UP>, <&kp LA(LS(C_VOL_UP))>;
-		mods = <(MOD_LSHIFT)>;
+		mods = <(MOD_LSFT)>;
 	    };
 	    s_vol_dn: s_vol_dn {
 		compatible = "zmk,behavior-mod-morph";
 		label = "SHIFT_VOLUME_DOWN";
 		#binding-cells = <0>;
 		bindings = <&kp C_VOL_DN>, <&kp LA(LS(C_VOL_DN))>;
-		mods = <(MOD_LSHIFT)>;
+		mods = <(MOD_LSFT)>;
 	    };
 	    ctrl_tab: ctrl_tab {
 		compatible = "zmk,behavior-mod-morph";

@@ -15,13 +15,18 @@
 include:
   - board: nice_nano
     shield: sofle_left nice_view_adapter nice_view
+    artifact-name: sofle_left
   - board: nice_nano
     shield: sofle_right nice_view_adapter nice_view
+    artifact-name: sofle_right
   - board: nice_nano
     shield: atreyu
+    artifact-name: atreyu
   - board: nice_nano
     shield: atreyu_rev2
+    artifact-name: atreyu_rev2
   - board: nice_nano
     shield: settings_reset
+    artifact-name: reset
 
 

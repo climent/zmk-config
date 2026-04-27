@@ -14,10 +14,10 @@
 ---
 include:
   - board: nice_nano
-    shield: sofle_left
+    shield: sofle_left//zmk
     artifact-name: sofle_left
   - board: nice_nano
-    shield: sofle_right
+    shield: sofle_right//zmk
     artifact-name: sofle_right
   - board: nice_nano
     shield: atreyu

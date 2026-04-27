@@ -2,16 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: sofle
-      url-base: https://github.com/zmkfirmware
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: sofle
-      remote: sofle
-      revision: main
-      url: https://github.com/zmkfirmware/zmk/tree/main/app/boards/shields/sofle
   self:
     path: config

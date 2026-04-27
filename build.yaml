@@ -13,10 +13,10 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: sofle_left
     artifact-name: sofle_left
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: sofle_right
     artifact-name: sofle_right
 #  - board: nice_nano

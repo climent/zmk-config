@@ -13,3 +13,5 @@ tools/
 
 # West projects from config/west.yml
 zmk/
+
+.zmk/

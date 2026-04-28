@@ -1,8 +1,0 @@
-file_format: "1"
-id: atreyu
-name: ATREYU
-type: shield
-url: https://github.com/climent/atreyu/tree/master/pcb/v1
-requires: [pro_micro]
-features:
-  - keys

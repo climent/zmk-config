@@ -22,7 +22,7 @@ include:
 #  - board: nice_nano
 #    shield: settings_reset
 #    artifact-name: reset
-  - board: nice_nano@2.0.0//zmk
+  - board: nice_nano//zmk
     shield: sofle_left
-  - board: nice_nano@2.0.0//zmk
+  - board: nice_nano//zmk
     shield: sofle_right
